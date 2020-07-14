@@ -1,0 +1,33 @@
+
+service: aws-nodejs-es6
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+# you can add packaging information here
+package:
+  include:
+    - handler.js
+    - src/**
+  excludeDevDependencies: false
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  serverless-offline:
+    babelOptions:
+      presets: ['es2015']
+
+functions:
+  scrapper:
+    handler: src/handlers/ping.handle
+    events:
+      - http:
+          path: ping
+          method: get
+
+plugins:
+  - serverless-webpack
+  - serverless-offline

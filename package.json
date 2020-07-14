@@ -1,0 +1,46 @@
+{
+  "name": "walmart",
+  "version": "0.0.1",
+  "description": "Walmart NodeJS scrapper",
+  "main": "handler.js",
+  "dependencies": {
+    "puppeteer": "^2.1.1",
+    "source-map-support": "^0.5.16",
+    "serverless-webpack": "^5.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "prettier": "^1.19.1",
+    "serverless-offline": "^6.0.0",
+    "webpack": "^4.42.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint .",
+    "fmt": "./node_modules/.bin/prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
+    "start": "sls offline start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/paragon1/walmart-scrapper.git"
+  },
+  "keywords": [
+    "scrapper",
+    "nodejs",
+    "serverless",
+    "walmart"
+  ],
+  "author": "Eduardo Aguilar <dante.aguilar41@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/paragon1/walmart-scrapper/issues"
+  },
+  "homepage": "https://gitlab.com/paragon1/walmart-scrapper#readme"
+}
